@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f3f6fb;
+      margin: 0;
+      padding: 30px;
+    }
+
+    .form-box {
+      max-width: 500px;
+      margin: 40px auto;
+      background: white;
+      padding: 25px 30px;   
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 12px;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    .radio-group,
+    .checkbox-group {
+      margin-top: 8px;
+    }
+
+    .radio-group label,
+    .checkbox-group label {
+      display: inline-block;
+      width: auto;
+      margin-right: 15px;
+      font-weight: normal;
+    }
+
+    .radio-group input,
+    .checkbox-group input {
+      width: auto;
+      margin-right: 6px;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    button {
+      margin-top: 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Student Registration Form</h2>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter password" />
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" /> Male</label>
+        <label><input type="radio" name="gender" value="female" /> Female</label>
+        <label><input type="radio" name="gender" value="other" /> Other</label>
+      </div>
+
+      <label>Interests</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="interest" value="music" /> Music</label>
+        <label><input type="checkbox" name="interest" value="sports" /> Sports</label>
+        <label><input type="checkbox" name="interest" value="reading" /> Reading</label>
+      </div>
+
+      <label for="department">Department</label>
+      <select id="department" name="department">
+        <option value="">Select Department</option>
+        <option value="computer-science">Computer Science</option>
+        <option value="business">Business</option>
+        <option value="arts">Arts</option>
+        <option value="engineering">Engineering</option>
+      </select>
+
+      <label for="about">About You</label>
+      <textarea id="about" name="about" placeholder="Write a little about yourself"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
